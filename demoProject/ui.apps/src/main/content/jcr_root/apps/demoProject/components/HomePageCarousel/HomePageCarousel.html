@@ -28,7 +28,7 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
     <ol class="carousel-indicators">
-${properties.title}
+                 ${properties.title}
         <sly data-sly-list="${model.carouselList}">
             <sly data-sly-test="${itemList.index==0}">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -37,7 +37,6 @@ ${properties.title}
                 <li data-target="#myCarousel" data-slide-to="${itemList.index}"></li>
             </sly>
         </sly>
-        tile,link,open in new tab
     </ol>
 
 

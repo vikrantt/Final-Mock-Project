@@ -1,0 +1,22 @@
+<sly data-sly-use.model="com.ttn.amc.demoProject.core.models.ListOfBlogsModel">
+<sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlibs.all @categories='demoProject.demo'}"></sly>
+
+    <div class="container">
+        <div data-sly-list="${model.blogsFieldList}"class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="${item.blogimage}" class="card-img-top" alt="..." width="300px" height="300px">
+                    <div class="card-body">
+                        <h5 class="text-success card-title">${item.caption}</h5>
+                        <h2 class=" text-dark card-text" href="#">${item.blogtitle}</h2>
+                        <p class="mb-1 text-muted">${item.blogdate}</p>
+                        <p class="card-text mb-auto">${item.description}</p>
+                        <a href="#">Continue reading</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</sly>
