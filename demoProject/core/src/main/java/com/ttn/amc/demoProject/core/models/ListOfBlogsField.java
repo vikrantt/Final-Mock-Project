@@ -19,6 +19,17 @@ public class ListOfBlogsField {
     @Inject
     private String blogdate;
 
+    @Inject
+    private String contReading;
+
+    public String getContReading() {
+        return contReading;
+    }
+
+    public void setContReading(String contReading) {
+        this.contReading = contReading;
+    }
+
     public String getBlogimage() {
         return blogimage;
     }
