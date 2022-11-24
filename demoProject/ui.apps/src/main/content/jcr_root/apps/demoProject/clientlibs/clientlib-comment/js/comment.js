@@ -1,13 +1,4 @@
-<!--/*<sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"*/-->
-<!--/*     data-sly-call="${clientlibs.all @categories='demoProject.comment'}"></sly>*/-->
-<sly>
-            <h3>Enter your comments:</h3>
-            <input type="text" id="comment-box" placeholder="Enter comment">
-            <button id="post">Post</button>
-            <ul id="unordered">
-            </ul>
-    <script>
-                     var post= document.getElementById("post");
+             var post= document.getElementById("post");
              post.addEventListener("click", function()
              {
             var commentBoxValue= document.getElementById("comment-box").value;
@@ -34,5 +25,3 @@
 
                 }
                 });
-    </script>
-</sly>
