@@ -1,5 +1,5 @@
 <sly data-sly-use.model="com.ttn.amc.demoProject.core.models.Header">
-<sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
+    <sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
         data-sly-call="${clientlibs.all @categories='demoProject.demo'}"></sly>
 
    <p>${model.UserName}</p>
@@ -17,22 +17,12 @@
         </div>
     </header>
     </div>
-    <div class="nav-scroller py-2 mb-3">
-        <nav class="nav d-flex">
-            <a class="p-2 text-muted" href="${properties.homeLink}.html">Home</a>
-            &nbsp&nbsp
-            <a class="p-2 text-muted" href="${properties.publishLink}.html">Published Blogs</a>
+    <sly data-sly-use.model="com.ttn.amc.demoProject.core.models.LinkModel">
+    <div class="nav-scroller py-2 mb-3" >
+        <nav class="nav d-flex" data-sly-list="${model.dataList}">
+            <a href="${item.link}.html" target="${item.target}">${item.text}</a>
+            &nbsp;&nbsp;
         </nav>
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/holder.min.js"></script>
-    <script>
-      Holder.addTheme('thumb', {
-        bg: '#55595c',
-        fg: '#eceeef',
-        text: 'Thumbnail'
-      });
-    </script>
+    </sly>
 </sly>

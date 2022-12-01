@@ -2,7 +2,6 @@
 <sly data-sly-use.clientlibs="/libs/granite/sightly/templates/clientlib.html"
      data-sly-call="${clientlibs.all @categories='demoProject.demo'}"></sly>
     <div class="nav-scroller py-2 mb-3" >
-
         <nav class="nav d-flex" data-sly-list="${model.dataList}">
             <a href="${item.link}.html" target="${item.target}">${item.text}</a>
             &nbsp;&nbsp;
